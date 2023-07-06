@@ -37,6 +37,25 @@
 
         .message-container {
             text-align: center;
+            margin-top: 20px;
+        }
+
+        .question {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .answers {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .timer {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -47,13 +66,46 @@
     <header>
         <h1 style="background-color: maroon;">My first coding quiz</h1>
         <h1 style="background-color: maroon;">A quiz designed to review the fundamentals of coding!</h1>
+        <div class="start-button" onclick="startQuiz()"></button>
+        </div>
+
+        </div>
         <div class="start-message">
             <p class="start-message">Click "Start Quiz" to test your knowledge</p>
+        </div>
+        <div class="question container" style="display: none;">
+            <h2 id="question">Question 1</h2>
+            <p id="timer" class="timer">Time remaining: <span id="countdown">60</span> seconds</p>
+
         </div>
         <button>Start Quiz</button> <!-- Add a button element -->
     </header>
 
-    <!-- Main interface section for quiz -->
+    <!-- Main section for quiz -->
+
+    <script>
+        function startQuiz() {
+            document.querySelector('.start-button-container').style.display = 'none';
+            document.querySelector('.start-message').style.display = 'none';
+            document.querySelector('.question-container').style.display = 'block';
+            startTimer();
+            // You can add your logic to load the first question here
+        }
+
+        function startTimer() {
+            let timeRemaining = 60;
+            const countdownElement = document.getElementById('countdown');
+            const timer = setInterval(() => {
+                timeRemaining--;
+                countdownElement.textContent = timeRemaining;
+
+                if (timeRemaining <= 0) {
+                    clearInterval(timer);
+                    // A
+                }
+            }, 1000);
+        }
+    </script>
 
 </body>
 
