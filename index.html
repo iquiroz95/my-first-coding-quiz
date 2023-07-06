@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+
 <head>
     <title>My first coding quiz</title>
     <meta charset="UTF-8" />
@@ -7,12 +10,34 @@
     <style>
         header {
             text-align: center;
+            position: relative;
         }
         h1 {
             margin: 0;
             color: white;
+        
         }
 
+        .start-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .start-message {
+            text-align: center;
+            margin-top: 10px; /* Add margin to separate from the button */
+            background-color: navy; /* Set a unique background color */
+            padding: 10px; /* Add padding for some space around the text */
+            display: inline-block;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .message-container {
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -21,12 +46,15 @@
 <body>
     <header>
         <h1 style="background-color: maroon;">My first coding quiz</h1>
-        <h1 style="background-color: black;">A quiz designed to review the fundamentals of coding!</h1>
+        <h1 style="background-color: maroon;">A quiz designed to review the fundamentals of coding!</h1>
+        <div class="start-message">
+            <p class="start-message">Click "Start Quiz" to test your knowledge</p>
+        </div>
+        <button>Start Quiz</button> <!-- Add a button element -->
     </header>
 
     <!-- Main interface section for quiz -->
 
 </body>
 
-</html>
 </html>
