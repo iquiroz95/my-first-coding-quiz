@@ -78,7 +78,7 @@
             <p id="timer" class="timer">Time remaining: <span id="countdown">60</span> seconds</p>
 
         </div>
-        <button>Start Quiz</button> <!-- Add a button element -->
+        <button>Start Quiz</button> <!--button element -->
     </header>
 
     <!-- Main section for quiz -->
@@ -89,7 +89,7 @@
             document.querySelector('.start-message').style.display = 'none';
             document.querySelector('.question-container').style.display = 'block';
             startTimer();
-            // You can add your logic to load the first question here
+            // Display question here?
         }
 
         function startTimer() {
@@ -101,7 +101,7 @@
 
                 if (timeRemaining <= 0) {
                     clearInterval(timer);
-                    // A
+                    // Display question here? 
                 }
             }, 1000);
         }
